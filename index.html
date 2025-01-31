@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lorena Aranda">
+    <meta name="description" content="Reponsive web with HTML and CSS">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Corporative</title>
+</head>
+<body>
+
+    <!--Enzabezado con menu hamburguesa-->
+    <header>
+        <h2 class="logo">Corporative</h2>
+        <!--Menú hambuguesa-->
+        <input type="checkbox" id="check">
+        <label for="check" class="mostrar-menu">
+            <!--Símbolo hambuguesa-->
+            &#8801
+        </label>
+        <nav class="menu">
+            <!--Normalmente hariamos una lista ul-li-a pero en este caso solo se usara <a>-->
+            <a href="#">Inicio</a>
+            <a href="#">Sobre Nosotros</a>
+            <a href="#">Blog</a>
+            <label for="check" class="esconder-menu">
+                <!--Símbolo cerrar-->
+                &#215
+            </label>
+        </nav>
+    </header>
+
+    <!--Sección del banner-->
+    <section id="banner">
+        <div class="contenido-banner">
+            <h3><span>CORPORATIVE: </span>DISEÑO WEB RESPONSIBLE <br> MOBILE FRIENDLY</h3>
+            <a href="#" class="boton-empezar">EMPEZAR</a>
+        </div>
+    </section>
+
+    <main class="container">
+
+        <!--Sección imagenes-->
+        <section id="personas">
+            <div>
+                <img src="./images/person1.jpg" alt="" width="40%">
+                <h4 id="first-image">Lorem ipsum dolor sit amet</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, laboriosam.</p>
+                <a href="" class="boton-saber-mas">Saber Más</a>
+            </div>
+            <div>
+                <img src="./images/person2.jpg" alt="" width="40%">
+                <h4 id="second-image">Lorem ipsum dolor sit amet</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, laboriosam.</p>
+                <a href="" class="boton-saber-mas">Saber Más</a>
+            </div>
+        </section>
+
+        <!--Iconos-->
+        <section id="iconos">
+            <div class="contenido-iconos">
+                <div>
+                    <i class="fa-solid fa-truck-fast fa-3x"></i>
+                    <h6>Rápido</h6>
+                    <p>Lorem ipsum dolor sit</p>
+                </div>
+                <div>
+                    <i class="fa-brands fa-accessible-icon fa-3x"></i>
+                    <h6>Accesible</h6>
+                    <p>Lorem ipsum dolor sit</p>
+                </div>
+                <div id="icono-mobile">
+                    <i class="fa-solid fa-mobile-screen-button fa-3x"></i>
+                    <h6>Responsive</h6>
+                    <p>Lorem ipsum dolor sit</p>
+                </div>
+            </div>
+            <div class="boton-iconos">
+                <a href="#" class="boton-saber-mas">Saber Más</a>
+            </div>
+        </section>
+
+        <!--Formulario-->
+        <section id="contacto">
+            <h4>Contacta con nosotros</h4>
+            <form action="#">
+                <div class="datos-form">
+                    <div class="nombre">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                    </div>
+                    <div class="email">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Email">
+                    </div>
+                </div>
+                <div class="mensaje">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                </div>
+                <div class="boton-formulario">
+                    <a href="#" class="boton-saber-mas">Enviar Mensaje</a>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    
+
+    <footer>
+        <p>&copy;2019 Lorena - Naviscode version</p>
+    </footer>
+    
+</body>
+</html>

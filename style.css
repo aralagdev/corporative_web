@@ -1,0 +1,368 @@
+/* Reseteamos los estilos pre-definidos */
+*{
+    margin: 0;
+    padding: 0; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+body{
+    background: #BDC1C2; 
+}
+
+/* HEADER */
+
+header{
+    height: 100px;
+    background: #4D4D5C;
+    /*Padding solo laterales*/
+    padding: 0 50px; 
+    color: #fff; 
+    /*Utilizamos flexbox para distribuir los elementos en el contenedor header*/
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* TITLE */
+.logo{
+    text-transform: uppercase;
+    color: #6CC091;
+    font-weight: 200;
+}
+
+/* MENU */
+.menu a{
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s; /*Para mejorar la fluidez del hover*/
+}
+
+/* botones hamburguesa menu */
+.mostrar-menu, .esconder-menu{
+    font-size: 30px;
+    cursor: pointer; /*El cursor cambia a una mano selectora*/
+    display: none; /*No se ha de ver en este tamaño de pantalla*/
+    transition: 0.4s; /*Para mejorar la fluidez del hover*/
+}
+
+/*Cambiamos el orden del boton hamburguesa para que salga al final de los elementos flex*/
+.mostrar-menu{
+    order:1; 
+}
+
+/*Hover de los elementos del menu*/
+.menu a:hover, 
+.mostrar-menu:hover, 
+.esconder-menu:hover{
+    color: #6CC091; 
+}
+
+/*Eliminamos el check de la vista*/
+#check{
+    display: none;
+}
+
+
+/* BANNER */
+#banner{
+    padding: 0 50px;
+    background-image: url(images/banner.jpg);
+    height: 45vh;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Efecto humo del banner*/
+#banner::before{
+    content: '';
+    background: rgba(77,77,92,0.6);
+    position: absolute;
+    width:100%;
+    height: 45vh;
+    left: 0;
+}
+
+.contenido-banner{
+    position:relative; /*Para que se ponga enzima de la capa smoke de la foto*/
+    color: #fff; 
+    display: flex; 
+    height: 100%; /*Para que el contenido ocupe todo el banner*/
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenido-banner h3{
+    font-size: 30px;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+
+.contenido-banner h3 span{
+    font-weight: 600;
+}
+
+.boton-empezar{
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #6CC091; 
+    padding: 20px 40px;
+    align-self: baseline; /*Sin esto el contenedor es como un bloque que ocupa todo el ancho, le ponemos baseline y solo ocupara el tamaño del contenido*/
+    transition: 0.4s; 
+}
+
+.boton-empezar:hover{
+    background: #6CC09070
+}
+
+.container{
+    max-width: 1600px;
+    margin: 0 auto; 
+
+}
+
+/* PERSONAS */
+#personas{
+    padding: 50px 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #fff;
+}
+
+#personas img{
+    border-radius: 100%;
+}
+
+#personas div{
+    padding: 30px 30px;
+}
+
+#first-image{
+    color:#4D4D5C;
+    font-size: 20px;
+    margin: 15px 0px;
+}
+
+#second-image{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color:#4D4D5C;
+    font-size: 20px;
+}
+
+
+#personas div p{
+    color:#4d4d5c87;
+    font-size: 18px;
+}
+
+.boton-saber-mas{
+    display: inline-block; /*Para que no se superponga con el texto*/
+    text-decoration: none;
+    color:#6CC091;
+    padding: 10px 30px;
+    border: 3px solid #6CC091; 
+    border-radius: 30px;
+    margin-top: 15px; 
+    transition: all 0.4s;
+}
+
+.boton-saber-mas:hover{
+    background: #6CC091;
+    color: #fff; 
+}
+
+/* ICONOS */
+#iconos{
+    padding: 0px 50px;
+    background: rgba(77,77,92,0.6);
+}
+
+.contenido-iconos{
+    padding: 50px 50px 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.contenido-iconos div{
+    flex: 1; /*Flex-grow: se reparte el espacio equitativamente en todos los elementos*/
+    margin: 20px 0px;
+    border-right: 2px solid rgba(255,255,255,0.2);
+}
+
+#icono-mobile{
+    border: none; 
+}
+
+.contenido-iconos div i{
+    color: #6CC091;
+}
+
+.contenido-iconos div h6{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 100;
+    margin: 10px 0px; 
+}
+
+.contenido-iconos div p{
+    color: rgba(255,255,255,0.55);
+    font-size: 15px;
+}
+
+.boton-iconos{
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+/*FORMULARIO*/
+
+#contacto{
+    background: #6CC091;
+    padding: 50px 0px;
+    color: #fff; 
+}
+
+#contacto h4{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px; 
+}
+
+#contacto form{
+    max-width: 80%;  /*Para centrar el formulario hacemos que el contenedor ocupe menos*/
+    margin: 0 auto; 
+}
+
+.datos-form{
+    display: flex; /*Para que nombre e email salgan al lado del otro*/
+}
+
+.datos-form div{
+    padding: 10px;
+    flex: 1; 
+}
+
+form label{
+    display: block; /*Para que las etiquetas salgan encima de los campos*/
+    margin-bottom: 10px; 
+}
+
+form input, form textarea{
+    background: #6CC091;
+    border-radius: 10px;
+    border: 2px solid #8dcca9; 
+    padding: 10px 5px;
+    outline: 0; 
+    color: #fff; 
+    width: 100%;
+}
+
+form input:focus, form textarea:focus{
+    border-color: #4bae77;
+    box-shadow: 0 0 0 1px #4bae77;
+}
+
+form input::placeholder, form textarea::placeholder{
+    color: #fff; 
+}
+
+
+.mensaje{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.boton-formulario .boton-saber-mas{
+    display: block;
+    border: 1px solid #fff;
+    color: #fff;
+    transition: 0.4s;
+}
+
+
+.boton-formulario .boton-saber-mas:hover{
+    background: #4fa776ad; 
+}
+
+
+footer{
+    background: #4D4D5C;
+    color: #cccccc4a;
+    text-align: center;
+    padding: 10px 0px; 
+}
+
+
+
+/* RESPONSIVE */
+/*A partir de tablet*/
+@media(max-width: 768px){
+    /* HEADER */
+    /*Hacemos que aparezcan los botones hamburguesa y cerrar*/
+    .mostrar-menu, 
+    .esconder-menu{
+        display: block;
+    }
+
+    /*Modificamos el contenedor del menu*/
+    .menu{
+        /*Hacemos que el menu aparezca como una pantalla encima del header cuando clickemos*/
+        position: fixed; /*Eliminamos el comportamiento flex y pasa a un menu fijo en pantalla*/
+        width: 100%;
+        height: 100vh;
+        background: #4D4D5C;
+        /*Propiedades top, left... para mover elementos con posicion absoluta*/ 
+        right: -100%; /*Por defecto esta escondido*/
+        top: 0; 
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100; /* Para que salga en la primera capa posible*/
+        transition: 0.8s; 
+    }
+   
+
+    /*Modificamos los enlaces del menu*/
+    .menu a{
+        display: block; /* Para que salgan uno encinma del otro*/
+        padding: 20px; 
+    }
+
+    /*Posicionamos la x donde queramos*/
+    .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px; 
+    }
+
+    /*Configuramos el boton de la hamburguesa*/
+    #check:checked ~ .menu{
+        /*Virgulilla selecciona elementos hermanos*/
+         right: 0; /*De esta manera el menu asociado a la hambuguesa en checked se pondra a la derecha en clicar*/
+    }
+
+    /* PERSONAS */
+    /*Hacemos que las personas se vean en columna en moviles y tablet*/
+    #personas{
+        flex-direction: column;
+    }
+
+    /* ICONOS */
+    .contenido-iconos{
+        flex-direction: column;
+    }
+
+    .contenido-iconos div{
+        border: none; 
+    }
+
+    /* FORMULARIO */
+    .datos-form{
+        flex-direction: column; 
+    }
+}
