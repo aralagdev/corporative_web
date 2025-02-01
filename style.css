@@ -92,6 +92,7 @@ header{
     height: 100%; /*Para que el contenido ocupe todo el banner*/
     flex-direction: column;
     justify-content: center;
+    padding: 0px 0px 0px 150px; 
 }
 
 .contenido-banner h3{
@@ -344,6 +345,11 @@ footer{
     #check:checked ~ .menu{
         /*Virgulilla selecciona elementos hermanos*/
          right: 0; /*De esta manera el menu asociado a la hambuguesa en checked se pondra a la derecha en clicar*/
+    }
+
+    /*BANNER*/
+    .contenido-banner{
+        padding: 0px; 
     }
 
     /* PERSONAS */
